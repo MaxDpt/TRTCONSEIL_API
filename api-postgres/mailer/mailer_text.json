@@ -1,0 +1,59 @@
+{
+    "signIn" : {
+        "Obj": "Confirmation d'inscription",
+        "Text_line01": "Votre demande d'inscription à bien été prise en compte.",
+        "Text_line02": "Notre équipe se chargera de vérifier vos information, avant que votre compte ne soit actif. vous serez tenue informé par mail dès son activation et pourrez vous connecter à votre espace personnel.",
+        "Text_Sign01": "Cordialement, ",
+        "Text_Sign02": " L'équipe TRT conseil" 
+    },
+    "updateState": {
+        "Obj": "Approbation d'inscription",
+        "Text_line01": "Votre Inscription a été approuvé par notre équipe.",
+        "Text_line02": "Vous pouvez dès aprésent accèder à votre espace personnel, en vous connectant sur le site. Toutes notre équipe vous souhaite la bienvenue !",
+        "Text_Sign01": "Cordialement, ",
+        "Text_Sign02": " L'équipe TRT conseil" 
+    },
+    "adminDelete": {
+        "Obj": "Rejet d'inscription",
+        "Text_line01": "Votre Inscription a été rejeté par notre équipe.",
+        "Text_line02": "Les informations que vous avez renseigné n'ont pas été accepté. Nous vous invitons à vérifier vos information et rehitérer votre demande. ",
+        "Text_Sign01": "Cordialement, ",
+        "Text_Sign02": " L'équipe TRT conseil" 
+    },
+    "userDelete": {
+        "Obj": "Suppresion du compte",
+        "Text_line01": "Votre compte a bien été supprimer.",
+        "Text_line02": "Toutes vos informations personnel ont été effacer et l'accès à votre compte ne pourras pas étre récupéré. Si vous souhaité nous rejoindre à nouveau, nous vous invitons à vous réinscrire. ",
+        "Text_Sign01": "Cordialement, ",
+        "Text_Sign02": " L'équipe TRT conseil" 
+    },
+    "setCandidaty": {
+        "Obj": "Candidature en traitement",
+        "Text_line01": "La candidature à été transmise à notre équipe.",
+        "Text_line02": "Elle sera évaluer avant d'être envoyer à l'employeur. Un mail de confirmation vous sera transmis une fois la candidature traité. ",
+        "Text_Sign01": "Cordialement, ",
+        "Text_Sign02": " L'équipe TRT conseil" 
+    },
+    "ApproveCandidaty": {
+        "Obj": "Candidature apprové",
+        "Text_line01": "La candidature a été transmise à l'employeur.",
+        "Text_line02": "Nous vous invitons à retrouver la liste de vos candidatures depuis votre espace personnel, en vous connectant à notre site. ",
+        "Text_Sign01": "Cordialement, ",
+        "Text_Sign02": " L'équipe TRT conseil" 
+    },
+    "deleteCandidaty": {
+        "Obj": "Candidature rejeté",
+        "Text_line01": "La candidature a été rejété.",
+        "Text_line02": "Le profile de la candiature que vous avez transmise de correspond pas aux attentes du poste demandé. N'hesité pas a consulter le details des annonces publié.  ",
+        "Text_Sign01": "Cordialement, ",
+        "Text_Sign02": " L'équipe TRT conseil" 
+    },
+    "Candidaty": {
+        "Obj": "Candidature reçu",
+        "Text_line01": "Une candidature vous à été transmise.",
+        "Text_line02": "Nous vous invitons à la consulter depuis votre espace personnel, en vous connectant sur notre site. ",
+        "Text_Sign01": "Cordialement, ",
+        "Text_Sign02": " L'équipe TRT conseil" 
+    }
+    
+}
