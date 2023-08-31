@@ -1,12 +1,12 @@
 // import de l'outil Pool de Express pg pour connexion à la base de donnée
-const Pool = require('pg').Pool
+const {Client} = require('pg');
 
 // import package pour utiliser les variables d'environnment
 const dotenv = require("dotenv");
 const result = dotenv.config();
 
 // paramètre de connexion à la base de donnée
-const pool = new Pool({
+const pool = new Client({
   connectionString: process.env.DATABASE_URL,
   ssl: true,
 });
