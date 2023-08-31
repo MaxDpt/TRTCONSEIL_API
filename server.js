@@ -19,5 +19,5 @@ const server = http.createServer(app);
 
 // le serveur écoute les requête sur le port
 server.listen(process.env.PORT || process.env.SERVER_PORT, () => {
-    console.log(`le serveur écoute sur le port ${process.env.SERVER_PORT}`)
+    console.log(`le serveur écoute sur le port ${process.env.PORT}`)
 });
