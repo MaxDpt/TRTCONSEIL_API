@@ -250,7 +250,9 @@ exports.updateUserPdf = async (req, res) => {
         const lastFile = getUserPdf[0].u_curiculum_vitea;
         if (lastFile) { 
     // ---> suppression de l'image existante dans le serveur :
-    fs.unlink(lastFile, async (error) => { if (error) { throw error;
+    fs.unlink(lastFile, async (error) => { if (error) { 
+            const updateUserPdf = await models.updateUserPdf(req);
+            return res.status(200).send(updateUserPdf);
         } else {
     // ---> enregistrement de la nouvel image dans le serveur :
         try {
