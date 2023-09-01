@@ -205,7 +205,9 @@ exports.updateUserImage = async (req, res) => {
         const lastImage = getUserImage[0].u_profil_image
         if (lastImage) { 
     // ---> suppression de l'image existante dans le serveur :
-    fs.unlink(lastImage, async (error) => { if (error) { throw error;
+    fs.unlink(lastImage, async (error) => { if (error) { 
+        const updateUserImage = await models.updateUserImage(req);
+        return res.status(200).send(updateUserImage);
         } else {
     // ---> enregistrement de la nouvel image dans le serveur :
         try {
