@@ -29,7 +29,8 @@ exports.getPublications = (req) => {
                 INNER JOIN STORES ON PUBLICATIONS.p_stores = STORES.s_id 
                 WHERE p_status = $1 
                 AND s_name LIKE $2 
-                OFFSET $3 LIMIT $4 order by p_id ASC`, [status, search, offset, limit], (error, results) => {
+                ORDER BY p_id DESC
+                OFFSET $3 LIMIT $4`, [status, search, offset, limit], (error, results) => {
     if (error) {
         reject(error)}
     resolve(results.rows); })
@@ -57,7 +58,7 @@ exports.getPublications_department = (req) => {
     const offset = parseInt(req.body.offset)
     const {status, search} = req.body
     const limit = parseInt(process.env.LIMIT)
-    pool.query('SELECT * FROM PUBLICATIONS INNER JOIN USERS ON PUBLICATIONS.p_user = USERS.u_id INNER JOIN STORES ON PUBLICATIONS.p_stores = STORES.s_id WHERE p_status = $1 AND STORES.s_postal_code = $2 AND s_name LIKE $3 OFFSET $4 LIMIT $5 order by p_id ASC', [status, postal_code, search, offset,limit], (error, results) => {
+    pool.query('SELECT * FROM PUBLICATIONS INNER JOIN USERS ON PUBLICATIONS.p_user = USERS.u_id INNER JOIN STORES ON PUBLICATIONS.p_stores = STORES.s_id WHERE p_status = $1 AND STORES.s_postal_code = $2 AND s_name LIKE $3 ORDER BY p_id DESC OFFSET $4 LIMIT $5', [status, postal_code, search, offset,limit], (error, results) => {
     if (error) {
         reject(error)}
     resolve(results.rows); })
@@ -79,7 +80,7 @@ exports.getPublications_activity = (req) => {
     const {status, activity, search }= req.body
     const offset = parseInt(req.body.offset)
     const limit = parseInt(process.env.LIMIT)
-    pool.query('SELECT * FROM PUBLICATIONS INNER JOIN USERS ON PUBLICATIONS.p_user = USERS.u_id INNER JOIN STORES ON PUBLICATIONS.p_stores = STORES.s_id WHERE p_status = $1 AND p_activity = $2 AND s_name LIKE $3 OFFSET $4 LIMIT $5 order by p_id ASC', [status, activity, search, offset, limit], (error, results) => {
+    pool.query('SELECT * FROM PUBLICATIONS INNER JOIN USERS ON PUBLICATIONS.p_user = USERS.u_id INNER JOIN STORES ON PUBLICATIONS.p_stores = STORES.s_id WHERE p_status = $1 AND p_activity = $2 AND s_name LIKE $3 ORDER BY p_id DESC OFFSET $4 LIMIT $5', [status, activity, search, offset, limit], (error, results) => {
     if (error) {
         reject(error)}
     resolve(results.rows); })
@@ -103,7 +104,7 @@ exports.getPublications_activity_department = (req) => {
     const offset = parseInt(req.body.offset)
     const postal_code = parseInt(req.body.postal_code)
     const limit = parseInt(process.env.LIMIT)
-    pool.query('SELECT * FROM PUBLICATIONS INNER JOIN USERS ON PUBLICATIONS.p_user = USERS.u_id INNER JOIN STORES ON PUBLICATIONS.p_stores = STORES.s_id WHERE p_status = $1 AND p_activity = $2 AND s_postal_code = $3 AND s_name LIKE $4 OFFSET $5 LIMIT $6 order by p_id ASC', [status, activity, postal_code, search, offset, limit], (error, results) => {
+    pool.query('SELECT * FROM PUBLICATIONS INNER JOIN USERS ON PUBLICATIONS.p_user = USERS.u_id INNER JOIN STORES ON PUBLICATIONS.p_stores = STORES.s_id WHERE p_status = $1 AND p_activity = $2 AND s_postal_code = $3 AND s_name LIKE $4 ORDER BY p_id DESC OFFSET $5 LIMIT $6', [status, activity, postal_code, search, offset, limit], (error, results) => {
     if (error) {
         reject(error)}
     resolve(results.rows); })
