@@ -20,7 +20,11 @@ const server = http.createServer(app);
 // le serveur écoute les requête sur le port
 server.listen(process.env.PORT || process.env.SERVER_PORT, () => {
     if (process.env.PORT ) {
-    console.log(`le serveur écoute sur le port ${process.env.PORT} // Production`) }
+    console.log(`le serveur écoute sur le port ${process.env.PORT} // Production`) } 
+    else { console.log(`La connexion au serveur a échoué // Production`) }
+
     if (process.env.SERVER_PORT ) {
-        console.log(`le serveur écoute sur le port ${process.env.SERVER_PORT} // Developpement`) }
-});
+    console.log(`le serveur écoute sur le port ${process.env.SERVER_PORT} // Developpement`) }
+    else { console.log(`La connexion au serveur a échoué // Developpement`) }
+}); 
+
